@@ -1,0 +1,1 @@
+npm install react framer-motion three @react-three/fiber @react-three/drei gsap react-intersection-observer react-typed particles.js react-tilt react-countup axios react-router-dom styled-components react-icons react-chartjs-2 chart.js
