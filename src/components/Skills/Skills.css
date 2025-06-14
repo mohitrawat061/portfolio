@@ -1,0 +1,137 @@
+/* components/Skills/Skills.css */
+.skills-section {
+  min-height: 100vh;
+  padding: 100px 5%;
+  background: #050505;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid #333;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ff88;
+  transition: width 0.3s ease;
+}
+
+.category-btn:hover {
+  color: #00ff88;
+  border-color: #00ff88;
+}
+
+.category-btn.active {
+  color: #00ff88;
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.category-btn.active::before {
+  width: 100%;
+}
+
+.skills-3d-container {
+  height: 400px;
+  margin: 2rem 0;
+  border: 2px solid #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-3d-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Skills Radar */
+.skills-radar {
+  max-width: 600px;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.radar-svg {
+  width: 100%;
+  height: auto;
+}
+
+.skill-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0a0a0a;
+  border: 2px solid #00ff88;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.skill-tooltip h4 {
+  color: #00ff88;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.skill-bar {
+  width: 200px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #00ff88;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+@media (max-width: 768px) {
+  .category-selector {
+    gap: 0.5rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-3d-container {
+    height: 300px;
+  }
+}
